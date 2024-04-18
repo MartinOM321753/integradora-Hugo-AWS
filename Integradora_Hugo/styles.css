@@ -1,0 +1,492 @@
+/* Estilos personalizados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fileNameSpan {
+    display: inline-block;
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+    align-content: center;
+}
+
+.fileActionImage {
+    height: 25px;
+    margin-left: 12%;
+    margin-right: 2%;
+}
+
+.fileActionImage:hover {
+    filter: brightness(85%);
+    cursor: pointer;
+}
+
+#fileList li {
+    display: flex;
+    /* Usar flexbox para alinear elementos */
+    align-items: center;
+    /* Alinear verticalmente en el centro */
+    border-bottom: 1px solid #ccc;
+    /* Borde inferior gris */
+    padding-bottom: 10px;
+    /* Espaciado inferior */
+    margin-bottom: 10px;
+    /* Espaciado entre elementos */
+}
+
+#fileList li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.divlogo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2%;
+}
+
+.imglogo {
+    padding: 10px;
+    border-radius: 50%;
+    width: 100px;
+    height: 80px;
+}
+
+.upload {
+    border: 5px dashed rgb(181, 181, 181);
+    background-color: #f2f2f2;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.upload:hover {
+    cursor: pointer;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.btnsubmit {
+    width: 500px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+
+    color: #ffffff;
+    background-color: #0055ff;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+.btnsubmit:hover {
+    opacity: .8;
+}
+
+.contlist {
+    color: #0a0a0a;
+    border: 3px solid black;
+}
+
+/*--------------------------------------------*/
+
+
+main {
+    min-width: 100%;
+    min-height: 100vh;
+    margin-top: 65px;
+    display: flex;
+    border: rgb(189, 189, 189) 1px;
+}
+
+.nav {
+    width: 100%;
+    height: 65px;
+    border-bottom: solid rgb(189, 189, 189) 1px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    transition: box-shadow 0.3s ease;
+
+
+}
+
+.nav.scrolled {
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
+
+}
+
+.logo {
+    width: 50px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 28px;
+    height: 28px;
+
+
+}
+
+.nombre {
+    width: 100px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 450;
+    color: #4b5157;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 3px;
+
+}
+
+.nombre:hover {
+    color: rgb(30, 142, 62);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.iconsnav {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: inline-end;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.iconsnavp {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: inline-end;
+    cursor: pointer;
+    margin-right: 15px;
+
+}
+
+
+
+.materia {
+    margin-top: 35px;
+    height: 20px;
+    padding-left: 10px;
+    position: absolute;
+    z-index: 3;
+    color: #ffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+.profesor {
+    width: auto;
+    height: 10px;
+    margin-top: 75px;
+    padding-left: 10px;
+    position: absolute;
+    z-index: 3;
+    color: #ffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+
+
+}
+
+.profesor:hover {
+    text-decoration: underline;
+
+}
+
+.materia:hover {
+    text-decoration: underline;
+
+}
+
+
+.iconsnav:hover {
+    background-color: rgb(240, 240, 240);
+    border-radius: 50%;
+
+}
+
+.iconsnav img {
+    width: 25px;
+    height: 25px;
+}
+
+.iconsnavp img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.iconsnavp:hover {
+    background-color: rgb(240, 240, 240);
+    border-radius: 50%;
+
+
+}
+
+
+
+
+
+.contenedorCards {
+    width: 100%;
+    padding-top: 5%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 295px));
+    gap: 25px;
+    padding-left: 2%;
+    padding-bottom: 20%;
+
+}
+
+.card {
+    position: relative;
+    background-color: #ffff;
+    min-width: 300px;
+    height: 295px;
+    border-radius: 5px;
+    border-bottom: solid rgb(190, 190, 190) 1px;
+    border-left: solid rgb(190, 190, 190) 1px;
+    border-right: solid rgb(190, 190, 190) 1px;
+
+
+}
+
+.card:hover {
+    box-shadow: 0px 1px 8px 0px rgb(218, 220, 224);
+    cursor: pointer;
+
+}
+
+
+.divimg {
+    display: flex;
+    justify-content: start;
+    padding-top: 5%;
+    padding-left: 5%;
+    width: 100%;
+    position: relative;
+}
+
+.imgperfil {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    float: inline-end;
+    margin-right: 15px;
+}
+
+
+
+
+
+.fotcard {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+    
+    /* Para alinear hacia la derecha */
+    gap: 5px;
+    height: 55px;
+    bottom: 0px;
+    border-top: solid rgb(190, 190, 190) 1px;
+}
+
+.file-info {
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.btnicons {
+
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.nombrearchivo {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 8%;
+
+    align-items: center;
+    font-weight: 500;
+}
+
+
+@media (max-width: 539px) {
+    .menu {
+        display: none;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .contenedorCards {
+        display: grid;
+        justify-content: center;
+
+
+    }
+}
+
+@media (max-width: 260px) {
+
+    .iconsnav {
+        display: none;
+
+
+    }
+}
+
+/*/////////////////*/
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: solid 2px;
+  }
+  
+  .dropzone-label {
+    cursor: pointer;
+    width: 100%;
+
+  }
+  
+  .dropzone-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 0.375rem;
+    border: 2px dashed #BDBFC4;
+    background-color: #f7fafc;
+  }
+  
+  .dropzone-label:hover .dropzone-content {
+    background-color: #edf2f7;
+  }
+  
+  .dropzone-label:hover.dark .dropzone-content {
+    background-color: #4a5568;
+  }
+  
+  .dropzone-icon {
+    margin-bottom: 1rem;
+    height: 2rem;
+    width: 200px;
+    color: #a0aec0;
+  }
+  
+  .dropzone-icon.dark {
+    color: #4a5568;
+  }
+  
+  .dropzone-text {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #a0aec0;
+  }
+  
+  .dropzone-text .font-semibold {
+    font-weight: 600;
+  }
+  
+  .dropzone-text.dark {
+    color: #4a5568;
+  }
+  
+  .dropzone-subtext {
+    font-size: 0.75rem;
+    color: #a0aec0;
+  }
+  
+  .dropzone-subtext.dark {
+    color: #4a5568;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .grid {
+    display: grid;
+  }
+  
+  .mt-6 {
+    margin-top: 1.5rem;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    filter: brightness(90%);
+  }
+  .condrop{
+    width: 100%;
+
+  }
+  
+ 
